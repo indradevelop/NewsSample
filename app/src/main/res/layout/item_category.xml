@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="item"
+            type="com.example.news.model.CategoryResult" />
+    </data>
+
+    <com.google.android.material.button.MaterialButton
+        android:onClick="@{clickListener}"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:textAllCaps="false"
+        app:cornerRadius="14dp"
+        android:text="@{item.name}"
+        tools:text="Business" />
+</layout>
